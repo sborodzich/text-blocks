@@ -1,0 +1,26 @@
+<div data-ng-controller="TextBlocksListController as textBlocksListCtrl">
+    <div class="blocks-adding-wrapper text-center">
+        <input type="text"
+               data-ng-model="textBlocksListCtrl.text"
+               placeholder="Type text"/>
+        <button data-ng-click="textBlocksListCtrl.createTextBlock('simple', textBlocksListCtrl.text)">
+            Add Simple Block
+        </button>
+        <button data-ng-click="textBlocksListCtrl.createTextBlock('complex', textBlocksListCtrl.text)">
+            Add Complex Block
+        </button>
+    </div>
+    <ul>
+        <li data-ng-repeat="textBlock in textBlocksListCtrl.textBlocksList">
+            <text-block-item text-block="textBlock" elem-index="$index"></text-block-item>
+        </li>
+    </ul>
+    <div class="status-panel">
+        <span>Status Panel:</span>
+
+        <div>Text blocks amount: {{textBlocksListCtrl.textBlocksList.length}}</div>
+        <div>Selected blocks amount: {{textBlocksListCtrl.selectedBlocksAmount()}}</div>
+        <div>Red selected blocks amount: {{textBlocksListCtrl.selectedRedBlocksAmount()}}</div>
+        <div>Green selected blocks amount: {{textBlocksListCtrl.selectedGreenBlocksAmount()}}</div>
+    </div>
+</div>

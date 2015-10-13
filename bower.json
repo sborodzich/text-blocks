@@ -1,0 +1,30 @@
+{
+  "name": "text-blocks",
+  "version": "1.0.0",
+  "authors": [
+    "sborodzich <serezha.hoho@gmail.com>"
+  ],
+  "description": "Test application using angular.js",
+  "keywords": [
+    "Angular",
+    "bower",
+    "gulp",
+    "test"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/sborodzich/text-blocks",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "bower_components"
+  ],
+  "dependencies": {
+    "angular": "~1.4.5",
+    "angular-ui-router": "~0.2.15",
+    "chance": "~0.8.0",
+    "bootstrap": "~3.3.5"
+  }
+}
